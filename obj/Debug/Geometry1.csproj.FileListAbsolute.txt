@@ -1,0 +1,9 @@
+D:\Projects\OOP\Geometry1\bin\Debug\Geometry1.exe.config
+D:\Projects\OOP\Geometry1\bin\Debug\Geometry1.exe
+D:\Projects\OOP\Geometry1\bin\Debug\Geometry1.pdb
+D:\Projects\OOP\Geometry1\obj\Debug\Geometry1.csprojResolveAssemblyReference.cache
+D:\Projects\OOP\Geometry1\obj\Debug\Geometry1.FormMain.resources
+D:\Projects\OOP\Geometry1\obj\Debug\Geometry1.Properties.Resources.resources
+D:\Projects\OOP\Geometry1\obj\Debug\Geometry1.csproj.GenerateResource.Cache
+D:\Projects\OOP\Geometry1\obj\Debug\Geometry1.exe
+D:\Projects\OOP\Geometry1\obj\Debug\Geometry1.pdb
