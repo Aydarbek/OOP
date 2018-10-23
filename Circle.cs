@@ -33,9 +33,7 @@ namespace Geometry1
         {
         }
 
-
-
-        public void Draw()
+        override public void Draw()
         {
             gr.DrawEllipse(pen, corner.x, corner.y, width, height);
         }

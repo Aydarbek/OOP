@@ -2,10 +2,9 @@
 
 namespace Geometry1
 {
-    class Shape
+    abstract class Shape
     {
         protected Pixel position;
-
         protected Graphics gr;
         protected Pen pen;
 
@@ -13,7 +12,6 @@ namespace Geometry1
         {
             pen = new Pen(Color.Blue);
         }
-    
 
         public void SetGraphics(Graphics graph)
         {
@@ -25,6 +23,7 @@ namespace Geometry1
             this.pen = pen;
         }
 
+        abstract public void Draw();
 
     }
 }

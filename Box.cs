@@ -21,7 +21,7 @@ namespace Geometry1
             height = Math.Abs (corner2.y - corner1.y);
         }
 
-        public void Draw()
+        override public void Draw()
         {
             gr.DrawRectangle(pen, corner1.x, corner1.y, width, height);
         }

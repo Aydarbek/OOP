@@ -17,7 +17,7 @@
             this.end = end;
         }
 
-        public void Draw()
+        override public void Draw()
         {
             gr.DrawLine(pen, begin.x, begin.y, end.x, end.y);
         }

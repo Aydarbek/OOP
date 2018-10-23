@@ -127,24 +127,8 @@ namespace Geometry1
         private void Draw(Shape [] shapes)
         {
             for (int i = 0; i < shapes.Length; i++)
-                Draw(shapes[i]);
+                shapes[i].Draw();
         }
-
-        private void Draw(Shape shape)
-        {
-            if (shape.GetType() == typeof(Line))
-               ((Line)shape).Draw();
-            else if (shape.GetType() == typeof(Box))
-                ((Box)shape).Draw();
-            else if (shape.GetType() == typeof(Circle))
-                ((Circle)shape).Draw();
-            else if (shape.GetType() == typeof(ColorLine))
-                ((ColorLine)shape).Draw();
-            else if (shape.GetType() == typeof(ColorBox))
-                ((ColorBox)shape).Draw();
-            else if (shape.GetType() == typeof(ColorCircle))
-                ((ColorCircle)shape).Draw();
-        }
-
+        
     }
 }
