@@ -29,8 +29,8 @@ namespace Geometry1
         Graphics gr;
         Pen pen;
 
-        Shape[] snowman1;
-        Shape[] snowman2;
+        Sprite snowman1;
+        Sprite snowman2;
 
         Pixel A, B, C, D, E, F, G, H, I, J, K, L, M;
 
@@ -48,7 +48,6 @@ namespace Geometry1
             bmp = new Bitmap(pictureBox.Width, pictureBox.Height);
             gr = Graphics.FromImage(bmp);
             pen = new Pen(Color.Blue);
-
         }
 
         private void InitSnowman1()
@@ -67,21 +66,16 @@ namespace Geometry1
             L = new Pixel(123, 298);
             M = new Pixel(139, 315);
 
-            snowman1 = new Shape[7];
-            snowman1 [0] = new Circle(A, D);            
-            snowman1 [1] = new Circle(B, E);
-            snowman1 [2] = new Circle(C, E);
-            snowman1 [3] = new Line(F, G);
-            snowman1 [4] = new Line(H, I);
-            snowman1 [5] = new Box(J, K);
-            snowman1 [6] = new Box(L, M);
+            snowman1 = new Sprite();
+            snowman1.SetGraphics(gr);
+            snowman1.AddShape(new Circle(A, D));            
+            snowman1.AddShape(new Circle(B, E));
+            snowman1.AddShape(new Circle(C, E));
+            snowman1.AddShape(new Line(F, G));
+            snowman1.AddShape(new Line(H, I));
+            snowman1.AddShape(new Box(J, K));
+            snowman1.AddShape(new Box(L, M));
 
-            for (int i=0; i<snowman1.Length; i++)
-            {
-                snowman1[i].SetGraphics(gr);
-                snowman1[i].SetPen(pen);
-
-            }
         }
 
         private void InitSnowman2()
@@ -102,25 +96,21 @@ namespace Geometry1
             M = new Pixel(delta + 139, 315);
 
 
-            snowman2 = new Shape[7];
-            snowman2[0] = new ColorCircle(A, D, Color.Red);
-            snowman2[1] = new ColorCircle(B, E, Color.Green);
-            snowman2[2] = new ColorCircle(C, E, Color.DarkMagenta);
-            snowman2[3] = new ColorLine(F, G, Color.Orange);
-            snowman2[4] = new ColorLine(H, I, Color.Orange);
-            snowman2[5] = new ColorBox(J, K, Color.DarkViolet);
-            snowman2[6] = new ColorBox(L, M, Color.DarkViolet);
+            snowman2 = new Sprite();
+            snowman2.SetGraphics(gr);
+            snowman2.AddShape(new ColorCircle(A, D, Color.Red));
+            snowman2.AddShape(new ColorCircle(B, E, Color.Green));
+            snowman2.AddShape(new ColorCircle(C, E, Color.DarkMagenta));
+            snowman2.AddShape(new ColorLine(F, G, Color.Orange));
+            snowman2.AddShape(new ColorLine(H, I, Color.Orange));
+            snowman2.AddShape(new ColorBox(J, K, Color.DarkViolet));
+            snowman2.AddShape(new ColorBox(L, M, Color.DarkViolet));
 
-
-            for (int i = 0; i < snowman2.Length; i++)
-            {
-                snowman2[i].SetGraphics(gr);
-            }
         }
         private void Draw()
         {
-            Draw(snowman1);
-            Draw(snowman2);
+            snowman1.Draw();
+            snowman2.Draw();
             pictureBox.Image = bmp;
         }
 
