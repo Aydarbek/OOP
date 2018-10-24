@@ -28,6 +28,13 @@ namespace Geometry1
                 shape.Draw();
         }
 
+        override public void Move(Pixel position)
+        {
+            base.Move(position);
+            foreach (Shape shape in Shapes)
+                shape.Move(position);
+        }
+
 
     }
 }
