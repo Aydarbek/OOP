@@ -23,7 +23,7 @@ namespace Geometry1
 
         override public void Draw()
         {
-            gr.DrawRectangle(pen, corner1.x, corner1.y, width, height);
+            gr.DrawRectangle(pen, corner1.x + position.x, corner1.y + position.y, width, height);
         }
 
     }

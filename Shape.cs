@@ -25,5 +25,10 @@ namespace Geometry1
 
         abstract public void Draw();
 
+        public void Move(Pixel position)
+        {
+            this.position = position;
+        }
+
     }
 }

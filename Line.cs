@@ -19,7 +19,7 @@
 
         override public void Draw()
         {
-            gr.DrawLine(pen, begin.x, begin.y, end.x, end.y);
+            gr.DrawLine(pen, begin.x + position.x, begin.y + position.y, end.x + position.x, end.y + position.y);
         }
 
 

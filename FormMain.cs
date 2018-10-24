@@ -28,19 +28,25 @@ namespace Geometry1
         Bitmap bmp;
         Graphics gr;
         Pen pen;
+        Circle circle;
+        Box box;
+        Line line;
 
         Sprite snowman1;
         Sprite snowman2;
 
         Pixel A, B, C, D, E, F, G, H, I, J, K, L, M;
 
+
+
         public FormMain()
         {
             InitializeComponent();
             Init();
-            InitSnowman1();
-            InitSnowman2();
-            Draw();
+//            InitSnowman1();
+//            InitSnowman2();
+//            Draw();
+            Demo();
         }
 
         private void Init()
@@ -48,6 +54,44 @@ namespace Geometry1
             bmp = new Bitmap(pictureBox.Width, pictureBox.Height);
             gr = Graphics.FromImage(bmp);
             pen = new Pen(Color.Blue);
+        }
+
+        private void Demo()
+        {
+            Pixel P = new Pixel(100, 100);
+            A = new Geometry1.Pixel(0, 0);
+
+            circle = new Circle(A, 50);
+            circle.SetGraphics(gr);
+            circle.Move(P);
+            circle.Draw();
+
+            box = new Box(-50, 50, 50, 100);
+            box.SetGraphics(gr);
+            box.Move(P);
+            box.Draw();
+
+            line = new Line(0, -50, 0, 100);
+            line.SetGraphics(gr);
+            line.Move(P);
+            line.Draw();
+
+
+            pictureBox.Image = bmp;
+
+
+        }
+
+        private void buttonMove_Click(object sender, EventArgs e)
+        {
+            Pixel P = new Pixel(300, 100);
+            circle.Move(P);
+            circle.Draw();
+            box.Move(P);
+            box.Draw();
+            line.Move(P);
+            line.Draw();
+            pictureBox.Image = bmp;
         }
 
         private void InitSnowman1()
